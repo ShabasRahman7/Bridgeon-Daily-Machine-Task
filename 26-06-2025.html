@@ -1,37 +1,45 @@
 <!-- 
 Create 3 nested functions: first(), second(), and third().
-
-
 Each function should log its own name when called.
-
-
 Call them in a nested fashion: first() calls second(), which calls third().
-
-
 Use comments to explain the creation and execution phases of the context for each function. -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function first(){
+        //creation phase: function first createds
+        function first() {
+            //execution phase of first: log first
             console.log("first")
-            second()
-        }
-        function second(){
-            console.log("second")
-            third()
-        }
-        function third(){
-            console.log("third")
+
+            //creation phase: function second created
+            function second() {
+                //execution phase of second: log second
+                console.log("second")
+
+                //creation phase: function third created
+                function third() {
+                    //execution phase of third: log third
+                    console.log("third")
+                }
+
+                third() //call third inside second
+            }
+            second() //call second inside first
+
         }
 
-        first()
+
+        first() //call first in global execution
     </script>
 </body>
+
 </html>
