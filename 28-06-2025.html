@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28-06-2025</title>
+</head>
+<body>
+    <script>
+        console.log('//creating object 1');
+        let student = {
+            marks : {
+                science: 100,
+                maths: 80,
+                physics: 50
+            }
+        }
+        console.log(student);
+        console.log('//creating shallow copy of object 1');
+        let S_student = {...student}
+        console.log(S_student);
+        console.log("// when log shallow copy looks same as actual object")
+        S_student.marks.maths = 0;
+        console.log(student);
+        console.log("//but when we modified the nested object of shallow copy it also affected actual object")
+        console.log("//creating object 2")
+        let student2 = {
+            marks : {
+                english: 60,
+                hindi: 40,
+                malayalam: 70
+            }
+        }
+        console.log(student2)
+        console.log("//creating deep copy object 2")
+        let D_student = JSON.parse(JSON.stringify(student2));
+        console.log(D_student);
+        console.log("//when log deep copy it also look same as actual object")
+        D_student.marks.english = 0;
+        console.log(student2);
+        console.log("//when modified deep copy it is not changed the actual object values")
+    </script>
+</body>
+</html>
