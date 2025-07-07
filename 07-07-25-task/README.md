@@ -1,12 +1,20 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build a React application that demonstrates component structure, reusability, and the behavior of React.StrictMode.
+Requirements:
+1. Strict Mode Wrapping:
+o Create an entry file (index.js) that wraps the main component (Dashboard) in
+React.StrictMode.
+2. Reusable Component:
+o Inside the Dashboard component, use a reusable Card component.
+o The Card should render its content using props.children wrapped inside a React.Fragment.
+3. Component Lifecycle Monitoring:
+о Add useEffect hooks in both Dashboard and Card components.
+o Use console.log() statements inside useEffect and its cleanup function to log messages when the components mount and unmount.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Expected output in development mode :
+Dashboard Mounted
+Card Mounted
+Card Unmounted
+Dashboard Unmounted
+Dashboard Mounted
+Card Mounted
