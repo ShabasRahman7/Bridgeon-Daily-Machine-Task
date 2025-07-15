@@ -1,12 +1,87 @@
-# React + Vite
+"https://docs.google.com/document/d/1RGmvSUbdRKi7EPRvTTWUkCTW1mqBZpulehT_RZ2WonY/edit?tab=t.0"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+"Login Navigation App"
+ Goal:
+Build a simple React app with 3 pages using React Router:
+Registration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Login
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Home
+
+
+Authentication state is managed with Context API, and user data is stored in LocalStorage.
+
+App Requirements:
+ Routes:
+/register: User registers with a form (username & password)
+
+
+/login: User logs in using saved credentials
+
+
+/home: Welcome page (accessible only after login)
+
+
+
+ Functionality:
+Register Page
+
+
+Input: username, password
+
+
+Save both to localStorage
+
+
+Redirect to /login
+
+
+Login Page
+
+
+Input: username, password
+
+
+Check against localStorage
+
+
+If correct:
+
+
+Set isAuthenticated in Context to true
+
+
+Redirect to /home
+
+
+Else: Show alert (“Invalid credentials”)
+
+
+Home Page
+
+
+Display “Welcome, [username]!”
+
+
+Show a Logout button → clears auth and redirects to /login
+
+
+
+
+📂 Suggested Folder Structure:
+src/
+  context/
+    AuthContext.js
+  components/
+    Register.js
+    Login.js
+    Home.js
+  App.js
+  index.js
+
+
+
